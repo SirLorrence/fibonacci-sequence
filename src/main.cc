@@ -3,20 +3,11 @@
 #include <iostream>
 using namespace std;
 
- int fibonacci(int number) 
-{
+ int fibonacci(int number) {
+    if(number == 0 || number == 1)
+        return number;
 
-    if (number == 0)
-    {
-        return 0;
-    }
-        else if (number == 1)
-        {
-            return 1;
-        }
-    {
-        return (fibonacci(number - 1) + fibonacci(number - 2));
-    }
+    return (fibonacci(number - 1) + fibonacci(number - 2));
 }
 
 int main()  
@@ -25,7 +16,6 @@ int main()
     
 
     int input;
-    int x {1777};
     cout << "Enter a number:"<<endl;
     cin >> input;
     cout << fibonacci(input)<< endl;
