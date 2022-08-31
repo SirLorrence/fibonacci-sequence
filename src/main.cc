@@ -3,11 +3,23 @@
 #include <iostream>
 using namespace std;
 
- int fibonacci(int number) {
+constexpr int fibonacci(int number) {
     if(number == 0 || number == 1)
         return number;
 
     return (fibonacci(number - 1) + fibonacci(number - 2));
+}
+
+void pyramid(int value){
+    int y {value};
+    int x {(y*2)-1};
+    for (size_t i = 0; i < y; i++){
+        int num = fibonacci(i);
+        for (size_t i2 = 0; i2 < x; i2++){
+            
+        }
+    }
+    
 }
 
 int main()  
